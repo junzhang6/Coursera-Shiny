@@ -26,15 +26,18 @@ shinyUI(fluidPage(
     mainPanel(
         conditionalPanel(
             condition="input.dataSource == 'Setosa'",
-            plotOutput("SetosaPlot")
+            plotOutput("SetosaPlot"),
+            HTML("<p> A linear relationship with the slope of 0.7985 and R-sqaured value 0.5514</p>")
         ), 
         conditionalPanel(
             condition="input.dataSource == 'Versicolor'",
-            plotOutput("VersicolorPlot")
+            plotOutput("VersicolorPlot"), 
+            HTML("<p> A linear relationship with the slope of 0.3197 and R-sqaured value 0.2766</p>")
         ), 
         conditionalPanel(
             condition="input.dataSource == 'Virginica'",
-            plotOutput("VirginicaPlot")
+            plotOutput("VirginicaPlot"), 
+            HTML("<p> A linear relationship with the slope of 0.2319 and R-sqaured value 0.2091</p>")
         )
     )
   )
